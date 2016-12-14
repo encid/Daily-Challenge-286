@@ -8,5 +8,14 @@ namespace ConsoleApplication1 {
         static void Main(string[] args)
         {
         }
+
+        static int ReverseFactorial(int input)
+        {
+            int a = input;
+
+            for (int i = 1; i <= a; i++) {
+
+            }
+        }
     }
 }
