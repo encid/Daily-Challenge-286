@@ -1,21 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ConsoleApplication1 {
+namespace DailyChallenge286 {
     class Program {
-        static void Main(string[] args)
+        static void Main()
         {
+            Console.WriteLine("120 = " + ReverseFactorial(120));
+            Console.WriteLine("150 = " + ReverseFactorial(150));
+            Console.WriteLine("3628800 = " + ReverseFactorial(3628800));
+            Console.WriteLine("479001600 = " + ReverseFactorial(479001600));
+            Console.WriteLine("6 = " + ReverseFactorial(6));
+            Console.WriteLine("18 = " + ReverseFactorial(18));
+
+            Console.ReadLine();
         }
 
-        static int ReverseFactorial(int input)
+        static string ReverseFactorial(int input)
         {
-            int a = input;
+            double a = input;
+            int i = 2;
 
-            for (int i = 1; i <= a; i++) {
-
+            while (a > 1) {
+                a = (a / i);
+                if (a.Equals(1)) return i.ToString() + "!";
+                i++;                
             }
+            return "NONE";            
         }
     }
 }
